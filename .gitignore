@@ -22,5 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.yarn
+.yarn/cache
+.yarn/sdks
+*.gz
 .vscode

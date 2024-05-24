@@ -7,7 +7,7 @@ interface GameStatus {
   getVariables: () => Record<string, string>;
 }
 
-export const useGame = create<GameStatus>()((set, get) => ({
+export const useGame = create<GameStatus>()((_, get) => ({
   player: {
     name: "Cute Cat",
   },
