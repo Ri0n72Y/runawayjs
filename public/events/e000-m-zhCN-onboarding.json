@@ -1,0 +1,8 @@
+{
+    "eventId": "e000-m-zh-onboarding",
+    "eventName": "Onboarding",
+    "type": "m",
+    "receivers": ["You ({player.name})"],
+    "title": "欢迎加入Runaway游戏发行公司 —— 探索无限，共筑游戏梦想",
+    "message": "{[/assets/e000-zhCN-content.md]}"
+}

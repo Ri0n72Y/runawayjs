@@ -1,0 +1,10 @@
+:root {
+    --icon-size: 4rem;
+}
+
+@font-face {
+    font-family: 'Fangyuan';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fangyuan'), url('./assets/fangyuan.ttf') format('truetype');
+}
