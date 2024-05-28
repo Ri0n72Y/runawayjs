@@ -12,3 +12,11 @@ export const colorPool = [
   "lightpink",
   "lightyellow",
 ];
+
+export const DiscussColorTheme = {
+  yellow: {
+    background: "#f5e8cb",
+    user: ["#ffedc3", "#fff6df"],
+    content: ["#fff0cd", "#fff8e7"],
+  },
+};

@@ -1,0 +1,32 @@
+{
+    "eventId": "eX01-o-zhCN-sample",
+    "eventName": "Sample Game",
+    "type": "o",
+    "source": "NGBBS",
+    "topic": "Sample Game Discussion",
+    "discussion": [{
+        "title": "",
+        "text": "Hello world.",
+        "time": "10:00",
+        "avatar": "https://i.pravatar.cc/300?u=a042581f4e29026707d",
+        "name": "Cute Cat"
+    }, {
+        "title": "",
+        "text": "Hello world.",
+        "time": "10:00",
+        "avatar": "https://i.pravatar.cc/300?u=a042581f4e29026707d",
+        "name": "Cute Cat"
+    }, {
+        "title": "",
+        "text": "Hello woooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooorld.",
+        "time": "10:00",
+        "avatar": "https://i.pravatar.cc/300?u=a042581f4e29026707d",
+        "name": "Cute Cat"
+    }, {
+        "title": "",
+        "text": "Hello world.\n\n\n\n\n\n and you good!",
+        "time": "10:00",
+        "avatar": "https://i.pravatar.cc/300?u=a042581f4e29026707d",
+        "name": "Cute Cat"
+    }]
+}

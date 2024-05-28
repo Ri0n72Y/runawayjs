@@ -51,7 +51,9 @@ export const useEvents = create<EventState>()((set) => ({
           );
           break;
         case "c":
+          break;
         case "o":
+          break;
       }
       events.push({ info: data, state: "unread" }); // FIXME: default should be backlog
     }

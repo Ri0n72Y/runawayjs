@@ -1,17 +1,18 @@
+import { useMemo } from "react";
 import styled from "styled-components";
 import { Pages } from "../store/types";
 import { useUIState } from "../store/ui";
 import { Chat } from "./Workspace/Chat";
+import { Discussion } from "./Workspace/Discussion";
 import { Email } from "./Workspace/Email";
-import { Opinions } from "./Workspace/Opinions";
-import { border } from "./styles";
-import { text } from "./typography";
-import { useMemo } from "react";
 import { Welcome } from "./Workspace/Welcome";
+import { DiscussColorTheme, border } from "./styles";
+import { text } from "./typography";
+import { useDiscussion } from "../store/discussion";
 
 export function Workspace() {
   const page = useUIState((state) => state.page);
-  console.log(page);
+  const theme = useDiscussion((state) => state.theme);
   const backgroundColor = useMemo(() => {
     switch (page) {
       case Pages.welcome:
@@ -20,16 +21,16 @@ export function Workspace() {
         return "white";
       case Pages.chat:
         return "#f1f1f1";
-      case Pages.opinions:
-        return "#fff0cd";
+      case Pages.discussion:
+        return DiscussColorTheme[theme].background;
     }
-  }, [page]);
+  }, [page, theme]);
   return (
     <Container style={{ backgroundColor }}>
       {page === Pages.welcome && <Welcome />}
       {page === Pages.email && <Email />}
       {page === Pages.chat && <Chat />}
-      {page === Pages.opinions && <Opinions />}
+      {page === Pages.discussion && <Discussion />}
     </Container>
   );
 }

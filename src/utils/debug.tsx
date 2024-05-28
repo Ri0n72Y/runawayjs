@@ -17,7 +17,7 @@ export function Debug() {
           Welcome: Pages.welcome,
           Email: Pages.email,
           Chat: Pages.chat,
-          Opinions: Pages.opinions,
+          Opinions: Pages.discussion,
         },
         onChange: (value) => {
           console.log("leva set");

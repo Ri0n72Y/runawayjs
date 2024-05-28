@@ -5,9 +5,11 @@ import { RedDot } from "../assets/redDot";
 import Triangle from "../assets/triangle";
 import { useEmail } from "../store/email";
 import { useEvents } from "../store/events";
-import { EventEmail, Pages } from "../store/types";
+import { EventDiscussion, EventEmail, Pages } from "../store/types";
 import { useUIState } from "../store/ui";
 import { text } from "./typography";
+import { useDiscussion } from "../store/discussion";
+import { Chat } from "../assets/chat";
 
 export function EmailEvent({ eventId }: { eventId: string }) {
   const [events, updateEvent] = useEvents((state) => [
@@ -29,6 +31,30 @@ export function EmailEvent({ eventId }: { eventId: string }) {
       }}
     >
       <Mail />
+      {event.state === "unread" && <Alert />}
+    </SideIcon>
+  );
+}
+
+export function DiscussEvent({ eventId }: { eventId: string }) {
+  const [events, updateEvent] = useEvents((state) => [
+    state.events,
+    state.updateEvent,
+  ]);
+  const [setPage] = useUIState((state) => [state.setPage]);
+  const setDiscussion = useDiscussion((state) => state.setDiscussion);
+  const event = events[eventId];
+  const info = event.info as EventDiscussion;
+  return (
+    <SideIcon
+      message={`${info.source} - ${info.topic}`}
+      onClick={() => {
+        setDiscussion([info]);
+        updateEvent(eventId, "active");
+        setPage(Pages.discussion);
+      }}
+    >
+      <Chat style={{ width: 32, height: 32 }} />
       {event.state === "unread" && <Alert />}
     </SideIcon>
   );

@@ -1,5 +1,5 @@
 {
-    "eventId": "e000-m-zh-onboarding",
+    "eventId": "e000-m-zhCN-onboarding",
     "eventName": "Onboarding",
     "type": "m",
     "receivers": ["You ({player.name})"],

@@ -2,7 +2,7 @@ export enum Pages {
   welcome = 0,
   email = 1,
   chat = 2,
-  opinions = 3,
+  discussion = 3,
 }
 
 export type EventType = "m" | "c" | "o";
@@ -19,4 +19,17 @@ export interface EventEmail extends EventInfo {
   avatar?: string;
   title: string;
   message: string;
+}
+
+export interface EventDiscussion extends EventInfo {
+  type: "c";
+  source: string;
+  topic: string;
+  discussion: {
+    title: string;
+    text: string;
+    time?: string;
+    avatar?: string;
+    name: string;
+  }[];
 }
